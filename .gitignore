@@ -1,3 +1,7 @@
 __pycache__
 .idea
 htmls
+lib
+requirements.txt
+commands.txt
+lambda_function.zip

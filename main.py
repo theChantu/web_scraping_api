@@ -1,9 +1,17 @@
+import os
 from fastapi import FastAPI
 from scrapers.amazon import scrape_amazon
 from scrapers.bestbuy import scrape_bestby
 from scrapers.newegg import scrape_newegg
 
+# from mangum import Mangum
+
+os.environ['TMPDIR'] = '/tmp/python'
+
 app = FastAPI()
+
+
+# handler = Mangum(app)
 
 
 @app.get("/amazon/{asin}")

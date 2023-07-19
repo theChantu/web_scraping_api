@@ -31,7 +31,7 @@ async def scrape_amazon(product):
     data = []
 
     try:
-        browser = await launch(headless=True)
+        browser = await launch(headless=True, userDataDir='/tmp/browser-data')
         page = await browser.newPage()
         await page.setExtraHTTPHeaders(headers)
         await page.goto(url)
